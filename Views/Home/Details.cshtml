@@ -1,0 +1,25 @@
+﻿@model AssignmentOnResCrud10feb.Models.Restaurant
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of Single Restaurant</h2>
+
+<table>
+    <tr>
+        <th>Resturant Id</th>
+        <td>@Model.RId</td>
+    </tr>
+    <tr>
+        <th>Resturant Name</th>
+        <td>@Model.RName</td>
+    </tr>
+    <tr>
+        <th>Cusine Type</th>
+        <td>@Model.CusineType</td>
+    </tr>
+</table>
+
+<a href="/Home/Index" class="btn btn-info">Back</a>
+
+

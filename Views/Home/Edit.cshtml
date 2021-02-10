@@ -1,0 +1,30 @@
+﻿@model AssignmentOnResCrud10feb.Models.Restaurant
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Restaurant</h2>
+
+<form action="/Home/Edit/@Model.RId" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="RName">Resturant Name</label>
+            <input type="hidden" name="RId" value="@Model.RId" />
+            <input type="text" name="RName" class="form-control" id="RName"
+                   placeholder="RestaurantName..." value="@Model.RName" />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="CusineType">Cusine Type</label>
+            <input type="text" name="CusineType" class="form-control" id="CusineType"
+                   placeholder="Cusine Type Please" value="@Model.CusineType" />
+        </div>
+
+        
+    </div>
+    <button type="submit" class="btn btn-success">Edit Resturant</button>
+    <a class="btn btn-dark" href="/Home/Index">Cancel</a>
+
+</form>
+

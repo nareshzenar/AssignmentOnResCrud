@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AssignmentOnResCrud10feb.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Restaurant List</h2>
+
+
+
+<br />
+
+<div>
+    <form class="form-inline" action="/Home/Index">
+        <label for="search">Search: </label>
+        <input type="text" class="form-control" id="search"
+               name="search" placeholder="Enter Any String" value="@ViewBag.Search" />
+        <button type="submit" class="btn btn-primary">Go</button>
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Restaurant Id</th>
+            <th>Restaurant Name</th>
+            <th>Cusine Type</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td> @item.RId</td>
+            <td><a href="/Home/Details/@item.RId">@item.RName</a></td>
+            <td> @item.CusineType</td>
+            <td><a href="/Home/Details/@item.RId">Details</a></td>
+            <td><a href="/Home/Create" class="btn btn-info">Add</a></td>
+            <td><a href="/Home/Edit/@item.RId" class="btn btn-primary">Edit</a></td>
+            <td><a href="/Home/Delete/@item.RId" class="btn btn-danger">Delete</a></td>
+        </tr>
+        }
+        </tbody>
+
+
+</table>
+

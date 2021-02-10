@@ -1,0 +1,29 @@
+﻿@model AssignmentOnResCrud10feb.Models.Restaurant
+
+    @{
+        ViewBag.Title = "Delete";
+    }
+
+    <h2>Delete Resturant</h2>
+
+    <form action="/Home/Delete/@Model.RId" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="RName">Restaurant Name</label>
+                <input type="hidden" name="RId" value="@Model.RId" />
+                @Model.RName
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="CusineType">Cusine Type</label>
+                @Model.CusineType
+            </div>
+
+            
+        </div>
+        <button type="submit" class="btn btn-danger">Delete Resturant</button>
+        <a class="btn btn-dark" href="/Home/Index">Cancel</a>
+    </form>
+
+
+
